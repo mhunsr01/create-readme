@@ -3,16 +3,16 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const generateMarkdown = ({yourname, email, projectname, description, usage, license, contribute, repo, tests}) =>
+const generateMarkdown = ({yourname, email, projectname, description, usage, license, contribute, repo, tests, licensebadge}) =>
   `
-## ${projectname}
+## ${projectname}${licensebadge}
    
 ## Description
     ${description}
 
 ## Table of Contents
 
-    Installation: (#installations)
+    Installation: (#installation)
 
     Usage: (#usage)
 
@@ -20,7 +20,7 @@ const generateMarkdown = ({yourname, email, projectname, description, usage, lic
 
     Contribute:(#contribute)
 
-    Test: (#tests)
+    Test: (#test)
 
     Questions: (#questions)
 
@@ -83,9 +83,11 @@ inquirer
       message: 'What are the install dependencies?',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
-      message: 'What kind of license should your project have?',
+     message: 'What kind of license should your project have?',
+     choices: ['MIT', 'ISC', 'GNU', 'Boost', 'MPL'], 
+     
     },
     {
       type: 'input',
@@ -114,6 +116,9 @@ inquirer
   }
  );
 
+
+
+ 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
