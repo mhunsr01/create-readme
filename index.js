@@ -3,9 +3,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const generateMarkdown = ({yourname, email, projectname, description, usage, license, contribute, repo, tests, licensebadge}) =>
+const generateMarkdown = ({yourname, email, projectname, description, usage, license, contribute, repo, tests}) =>
   `
-## ${projectname}${licensebadge}
+## ${projectname}
    
 ## Description
     ${description}
@@ -53,7 +53,7 @@ const generateMarkdown = ({yourname, email, projectname, description, usage, lic
     ## Questions: 
     
     If you have any questions about the repo, open an issue or contact me directly at ${email}.
-    You can find more of my work, ${yourname}, at ${repo}.`;
+    You can find more of my work, ${yourname}, at github.com/${repo}.`;
 
 inquirer
   .prompt([

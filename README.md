@@ -1,8 +1,8 @@
 
-## sdg;kljundefined
+## Create REadme.md
    
 ## Description
-    sdfg;k
+    To create a readme file dynamically using the command prompt
 
 ## Table of Contents
 
@@ -29,22 +29,22 @@
 
     ## Usage: 
     
-    aeek;lfd
+    it is on github
 
     ## License: 
     
-    MPL
+    MIT
 
     ## Contribute: 
     
-    as;dklj
+    by creating files
 
     ##  Test: 
     To run tests, use the following command:
 
-    as;dfk
+    test
 
     ## Questions: 
     
-    If you have any questions about the repo, open an issue or contact me directly at sdfg;lkj.
-    You can find more of my work, ds;lfgkj, at as'dfj.
+    If you have any questions about the repo, open an issue or contact me directly at mhunsr@gmail.com.
+    You can find more of my work, Matthew Hunter, at github.com/mhunsr01.
